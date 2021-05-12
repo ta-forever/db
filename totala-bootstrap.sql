@@ -151,15 +151,15 @@ values (1, "global", "leaderboard.global.name", "leaderboard.global.desc"),
        (4, "ladder1v1_tazero", "leaderboard.ladder1v1_tazero.name", "leaderboard.ladder1v1_tazero.desc"),
        (5, "ladder1v1_tamayhem", "leaderboard.ladder1v1_tamayhem.name", "leaderboard.ladder1v1_tamayhem.desc"),
        (6, "ladder1v1_tavmod", "leaderboard.ladder1v1_tavmod.name", "leaderboard.ladder1v1_tavmod.desc"),
-       (7, "ladder1v1_twilight", "leaderboard.ladder1v1_twilight.name", "leaderboard.ladder1v1_twilight.desc"),;
+       (7, "ladder1v1_twilight", "leaderboard.ladder1v1_twilight.name", "leaderboard.ladder1v1_twilight.desc");
 
 insert into matchmaker_queue (id, technical_name, featured_mod_id, leaderboard_id, name_key)
-values (1, "ladder1v1_tacc", 1, 2, "matchmaker.ladder1v1_tacc"),
-       (2, "ladder1v1_taesc", 3, 3, "matchmaker.ladder1v1_taesc"),
-       (3, "ladder1v1_tazero", 4, 4, "matchmaker.ladder1v1_tazero"),
-       (4, "ladder1v1_tamayhem", 5, 5, "matchmaker.ladder1v1_tamayhem"),
-       (5, "ladder1v1_tavmod", 6, 6, "matchmaker.ladder1v1_tavmod"),
-       (6, "ladder1v1_twilight", 7, 7, "matchmaker.ladder1v1_twilight");
+values (1, "ladder1v1_tacc", 1, 2, "matchmaker.queue.ladder1v1_tacc"),
+       (2, "ladder1v1_taesc", 3, 3, "matchmaker.queue.ladder1v1_taesc"),
+       (3, "ladder1v1_tazero", 4, 4, "matchmaker.queue.ladder1v1_tazero"),
+       (4, "ladder1v1_tamayhem", 5, 5, "matchmaker.queue.ladder1v1_tamayhem"),
+       (5, "ladder1v1_tavmod", 6, 6, "matchmaker.queue.ladder1v1_tavmod"),
+       (6, "ladder1v1_twilight", 7, 7, "matchmaker.queue.ladder1v1_twilight");
 
 insert into map_pool (id, name)
 values (1, "Ladder1v1 season 1");
