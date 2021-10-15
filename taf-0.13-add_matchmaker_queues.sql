@@ -1,5 +1,3 @@
--- delete events global and ladder1v1 _rating_distribution _rating_rank_view
-
 delete from map_pool_map_version;
 delete from matchmaker_queue_map_pool;
 delete from matchmaker_queue;
