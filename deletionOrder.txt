@@ -96,6 +96,7 @@ ladder1v1_rating_rank_view
 ladder1v1_rating
 global_rating_rank_view
 game_reviews_summary
+game_featuredMods_version
 coop_leaderboard
 vote
 league_schedule

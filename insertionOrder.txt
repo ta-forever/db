@@ -26,6 +26,7 @@ game_player_stats
 league_schedule
 vote
 coop_leaderboard
+game_featuredMods_version
 game_reviews_summary
 global_rating_rank_view
 ladder1v1_rating
