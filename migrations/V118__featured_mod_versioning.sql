@@ -4,6 +4,9 @@ ALTER TABLE game_featuredMods_version ADD COLUMN git_branch VARCHAR(40);
 -- ALTER TABLE game_featuredMods_version DROP COLUMN display_name;
 ALTER TABLE game_featuredMods_version ADD COLUMN display_name VARCHAR(40);
 
+-- ALTER TABLE game_featuredMods_version DROP COLUMN comment;
+ALTER TABLE game_featuredMods_version ADD COLUMN comment VARCHAR(255);
+
 -- ALTER TABLE game_featuredMods DROP COLUMN install_package;
 ALTER TABLE game_featuredMods ADD COLUMN install_package JSON;
 
