@@ -60,4 +60,53 @@ values(
 "https://www.getpostman.com/oauth2/callback",
 "read_events read_achievements upload_map upload_mod write_account_data administrative_actions"
 );
- 
+
+
+-- twilight 2v2
+insert into leaderboard (id, technical_name, name_key, description_key)
+	values (11, "ladder2v2_tatw", "Twilight 2v2+", "leaderboard.ladder2v2_tatw.desc");
+insert into matchmaker_queue (id, technical_name, featured_mod_id, leaderboard_id, name_key, team_size)
+	values (11, "ladder2v2_tatw", 7, 11, "Twilight 2v2+", 2);
+insert into map_pool (id, name)
+	values (11, "tatw 2v2");
+insert into matchmaker_queue_map_pool (matchmaker_queue_id, map_pool_id, min_rating, max_rating)
+	values (11, 11, NULL, NULL);
+
+-- remove tacc 2v2
+delete from matchmaker_queue_map_pool where map_pool_id = 7;
+delete from map_pool where id = 7;
+delete from matchmaker_queue where id = 7;
+delete from leaderboard where id = 8;
+
+-- mayhem 2v2
+insert into leaderboard (id, technical_name, name_key, description_key)
+	values (12, "ladder2v2_tamayhem", "Mayhem 2v2+", "leaderboard.ladder2v2_tamayhem.desc");
+insert into matchmaker_queue (id, technical_name, featured_mod_id, leaderboard_id, name_key, team_size)
+	values (12, "ladder2v2_tamayhem", 5, 12, "Twilight 2v2+", 2);
+insert into map_pool (id, name)
+	values (12, "tamayhem 2v2");
+insert into matchmaker_queue_map_pool (matchmaker_queue_id, map_pool_id, min_rating, max_rating)
+	values (12, 12, NULL, NULL);
+
+-- remove zero 1v1
+delete from matchmaker_queue_map_pool where map_pool_id = 5;
+delete from map_pool where id = 5;
+delete from matchmaker_queue where id = 5;
+delete from leaderboard where id = 6;
+
+
+-- template to remove leaderboard ...
+delete from matchmaker_queue_map_pool where map_pool_id = (select id from map_pool where name = 'tamayhem 2v2');
+delete from map_pool where name = 'tamayhem 2v2';
+delete from matchmaker_queue where technical_name = 'ladder2v2_tamayhem';
+delete from leaderboard where technical_name = 'ladder2v2_tamayhem';
+
+-- template to add leaderboard ...
+insert into leaderboard (id, technical_name, name_key, description_key)
+	values (12, 'ladder2v2_tamayhem', 'Mayhem 2v2+', 'leaderboard.ladder2v2_tamayhem.desc');
+insert into matchmaker_queue (id, technical_name, featured_mod_id, leaderboard_id, name_key, team_size)
+	values (12, 'ladder2v2_tamayhem', (select id from game_featuredMods where gamemod = 'tamayhem'), (select id from leaderboard where technical_name = 'ladder2v2_tamayhem'), "Twilight 2v2+", 2);
+insert into map_pool (id, name)
+	values (12, 'tamayhem 2v2');
+insert into matchmaker_queue_map_pool (matchmaker_queue_id, map_pool_id, min_rating, max_rating)
+	values (12, (select id from map_pool where name = 'tamayhem 2v2'), NULL, NULL);
