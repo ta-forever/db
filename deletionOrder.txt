@@ -89,6 +89,7 @@ mod_stats
 mod_reviews_summary
 map_version_reviews_summary
 map_reviews_summary
+login_verifier
 login_log
 league_rating_range
 ladder_division_score
@@ -96,6 +97,7 @@ ladder1v1_rating_rank_view
 ladder1v1_rating
 global_rating_rank_view
 game_reviews_summary
+game_launch_verifier
 game_featuredMods_version
 coop_leaderboard
 vote

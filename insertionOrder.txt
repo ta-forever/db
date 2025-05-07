@@ -27,6 +27,7 @@ league_schedule
 vote
 coop_leaderboard
 game_featuredMods_version
+game_launch_verifier
 game_reviews_summary
 global_rating_rank_view
 ladder1v1_rating
@@ -34,6 +35,7 @@ ladder1v1_rating_rank_view
 ladder_division_score
 league_rating_range
 login_log
+login_verifier
 map_reviews_summary
 map_version_reviews_summary
 mod_reviews_summary
