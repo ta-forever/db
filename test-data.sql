@@ -54,6 +54,13 @@ DELETE FROM map_pool_map_version;
 
 SET FOREIGN_KEY_CHECKS=1;
 
+-- sample avatars - create before insert into logins because auto-avatar triggers ...
+insert into avatars_list (id, filename, tooltip) values
+  (1, 'qai2.png', 'QAI'),
+  (2, 'UEF.png', 'UEF'),
+  (3, 'arm.png', 'ARM'),
+  (4, 'core.png', 'CORE');
+
 -- Login table
 -- Most accounts get a creation time in the past so that they pass account
 -- age check.
@@ -226,13 +233,8 @@ insert into mod_stats (mod_id, times_played, likers) VALUES
         (2, 0, ''),
         (3, 1, '');
 
--- sample avatars
-insert into avatars_list (id, filename, tooltip) values
-  (1, 'qai2.png', 'QAI'),
-  (2, 'UEF.png', 'UEF');
-
-insert into avatars (idUser, idAvatar, selected) values (2, 1, 0), (2, 2, 1);
-insert into avatars (idUser, idAvatar, selected, expires_at) values (3, 1, 0, NOW());
+insert into avatars (idUser, idAvatar, selected) values (2, 3, 0), (2, 4, 1);
+insert into avatars (idUser, idAvatar, selected, expires_at) values (3, 3, 0, NOW());
 
 -- sample bans
 insert into ban(id, player_id, author_id, reason, level) values
