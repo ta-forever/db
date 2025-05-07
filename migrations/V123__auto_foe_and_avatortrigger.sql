@@ -2,7 +2,6 @@ ALTER TABLE friends_and_foes ADD COLUMN auto_foe TINYINT(1) DEFAULT 0;
 
 DELIMITER $$
 
--- Drop and create the first trigger
 DROP TRIGGER IF EXISTS after_login_insert_auto_foe$$
 CREATE TRIGGER after_login_insert_auto_foe
 AFTER INSERT ON login
@@ -33,17 +32,18 @@ DELIMITER ;
 
 DELIMITER $$
 
--- Drop and create the second trigger
 DROP TRIGGER IF EXISTS after_login_insert_avatars$$
 CREATE TRIGGER after_login_insert_avatars
 AFTER INSERT ON login
 FOR EACH ROW
 BEGIN
-    INSERT INTO avatars (idUser, idAvatar)
-    VALUES 
-        (NEW.id, 1),
-        (NEW.id, 2);
+    IF EXISTS (SELECT 1 FROM avatars_list WHERE id = 1) THEN
+        INSERT INTO avatars (idUser, idAvatar) VALUES (NEW.id, 1);
+    END IF;
+
+    IF EXISTS (SELECT 1 FROM avatars_list WHERE id = 2) THEN
+        INSERT INTO avatars (idUser, idAvatar) VALUES (NEW.id, 2);
+    END IF;
 END$$
 
--- Reset delimiter to default
 DELIMITER ;
