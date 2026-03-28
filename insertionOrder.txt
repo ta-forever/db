@@ -5,6 +5,7 @@ achievement_definitions
 avatars_list
 game_validity
 group_permission
+login_verifier_datas
 map_pool
 tutorial_category
 tutorial_sections
@@ -19,10 +20,10 @@ user_group
 game_stats
 mod_version
 voting_choice
+game_player_stats
 matchmaker_queue
 moderation_report
 clan
-game_player_stats
 league_schedule
 vote
 coop_leaderboard
@@ -30,12 +31,13 @@ game_featuredMods_version
 game_launch_verifier
 game_reviews_summary
 global_rating_rank_view
+gw_game_player_stats
+gw_game_stats
 ladder1v1_rating
 ladder1v1_rating_rank_view
 ladder_division_score
 league_rating_range
 login_log
-login_verifier
 map_reviews_summary
 map_version_reviews_summary
 mod_reviews_summary
@@ -55,6 +57,7 @@ global_rating
 group_permission_assignment
 leaderboard_rating
 leaderboard_rating_journal
+login_verifier
 map_pool_map_version
 map_version_review
 matchmaker_queue_game

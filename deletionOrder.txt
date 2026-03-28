@@ -70,6 +70,7 @@ matchmaker_queue_map_pool
 matchmaker_queue_game
 map_version_review
 map_pool_map_version
+login_verifier
 leaderboard_rating_journal
 leaderboard_rating
 group_permission_assignment
@@ -89,12 +90,13 @@ mod_stats
 mod_reviews_summary
 map_version_reviews_summary
 map_reviews_summary
-login_verifier
 login_log
 league_rating_range
 ladder_division_score
 ladder1v1_rating_rank_view
 ladder1v1_rating
+gw_game_stats
+gw_game_player_stats
 global_rating_rank_view
 game_reviews_summary
 game_launch_verifier
@@ -102,10 +104,10 @@ game_featuredMods_version
 coop_leaderboard
 vote
 league_schedule
-game_player_stats
 clan
 moderation_report
 matchmaker_queue
+game_player_stats
 voting_choice
 mod_version
 game_stats
@@ -120,6 +122,7 @@ uniqueid
 tutorial_sections
 tutorial_category
 map_pool
+login_verifier_datas
 group_permission
 game_validity
 avatars_list

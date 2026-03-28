@@ -138,6 +138,11 @@
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
+                                                <td title="gw_game_stats.game_id references game_stats.id via fk_gw_game_stats_game_id"><a href='gw_game_stats.html'>gw_game_stats</a><span class='relatedKey'>.game_id</span></td>
+                                                <td class="constraint detail">fk_gw_game_stats_game_id</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
                                                 <td title="matchmaker_queue_game.game_stats_id references game_stats.id via matchmaker_queue_game_ibfk_2"><a href='matchmaker_queue_game.html'>matchmaker_queue_game</a><span class='relatedKey'>.game_stats_id</span></td>
                                                 <td class="constraint detail">matchmaker_queue_game_ibfk_2</td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
@@ -521,17 +526,18 @@
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
 <area shape="rect" id="node1" href="coop_leaderboard.html" target="_top" title="coop_leaderboard" alt="" coords="808,5,1065,152">
-<area shape="rect" id="node2" href="game_stats.html" target="_top" title="game_stats" alt="" coords="332,448,724,928">
-<area shape="rect" id="node4" href="login.html" target="_top" title="login" alt="" coords="58,996,235,1201">
-<area shape="rect" id="node7" href="game_featuredMods.html" target="_top" title="game_featuredMods" alt="" coords="5,416,288,563">
-<area shape="rect" id="node8" href="map_version.html" target="_top" title="map_version" alt="" coords="15,580,278,844">
-<area shape="rect" id="node9" href="game_validity.html" target="_top" title="game_validity" alt="" coords="37,861,256,979">
-<area shape="rect" id="node3" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="804,473,1069,737">
-<area shape="rect" id="node5" href="game_review.html" target="_top" title="game_review" alt="" coords="831,755,1042,931">
+<area shape="rect" id="node2" href="game_stats.html" target="_top" title="game_stats" alt="" coords="332,593,724,1073">
+<area shape="rect" id="node4" href="login.html" target="_top" title="login" alt="" coords="58,1192,235,1397">
+<area shape="rect" id="node7" href="game_featuredMods.html" target="_top" title="game_featuredMods" alt="" coords="5,612,288,759">
+<area shape="rect" id="node8" href="map_version.html" target="_top" title="map_version" alt="" coords="15,776,278,1040">
+<area shape="rect" id="node9" href="game_validity.html" target="_top" title="game_validity" alt="" coords="37,1057,256,1175">
+<area shape="rect" id="node3" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="804,672,1069,936">
+<area shape="rect" id="node5" href="game_review.html" target="_top" title="game_review" alt="" coords="831,953,1042,1129">
 <area shape="rect" id="node6" href="game_reviews_summary.html" target="_top" title="game_reviews_summary" alt="" coords="777,169,1097,316">
-<area shape="rect" id="node10" href="matchmaker_queue_game.html" target="_top" title="matchmaker_queue_game" alt="" coords="768,333,1105,456">
-<area shape="rect" id="node11" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="792,1171,1081,1376">
-<area shape="rect" id="node12" href="teamkills.html" target="_top" title="teamkills" alt="" coords="850,948,1023,1153">
+<area shape="rect" id="node10" href="gw_game_stats.html" target="_top" title="gw_game_stats" alt="" coords="821,333,1053,515">
+<area shape="rect" id="node11" href="matchmaker_queue_game.html" target="_top" title="matchmaker_queue_game" alt="" coords="768,532,1105,655">
+<area shape="rect" id="node12" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="792,1369,1081,1575">
+<area shape="rect" id="node13" href="teamkills.html" target="_top" title="teamkills" alt="" coords="850,1147,1023,1352">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/game_stats.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
@@ -544,7 +550,7 @@
 <area shape="rect" id="node8" href="game_stats.html" target="_top" title="game_stats" alt="" coords="953,531,1345,1011">
 <area shape="rect" id="node5" href="clan.html" target="_top" title="clan" alt="" coords="317,1856,492,1944">
 <area shape="rect" id="node6" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="641,1837,895,1925">
-<area shape="rect" id="node7" href="coop_leaderboard.html" target="_top" title="coop_leaderboard" alt="" coords="1429,492,1687,639">
+<area shape="rect" id="node7" href="coop_leaderboard.html" target="_top" title="coop_leaderboard" alt="" coords="1429,457,1687,604">
 <area shape="rect" id="node10" href="game_featuredMods.html" target="_top" title="game_featuredMods" alt="" coords="627,369,909,516">
 <area shape="rect" id="node17" href="map_version.html" target="_top" title="map_version" alt="" coords="637,1253,899,1517">
 <area shape="rect" id="node18" href="game_validity.html" target="_top" title="game_validity" alt="" coords="659,821,877,939">
@@ -552,41 +558,43 @@
 <area shape="rect" id="node11" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="281,1961,529,2049">
 <area shape="rect" id="node12" href="game_featuredMods_version.html" target="_top" title="game_featuredMods_version" alt="" coords="968,215,1331,303">
 <area shape="rect" id="node13" href="game_launch_verifier.html" target="_top" title="game_launch_verifier" alt="" coords="259,2067,550,2155">
-<area shape="rect" id="node14" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="1425,1161,1691,1249">
-<area shape="rect" id="node15" href="game_review.html" target="_top" title="game_review" alt="" coords="1453,1437,1663,1525">
-<area shape="rect" id="node16" href="game_reviews_summary.html" target="_top" title="game_reviews_summary" alt="" coords="1398,656,1718,803">
-<area shape="rect" id="node30" href="map.html" target="_top" title="map" alt="" coords="317,1387,492,1475">
+<area shape="rect" id="node14" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="1425,1105,1691,1193">
+<area shape="rect" id="node15" href="game_review.html" target="_top" title="game_review" alt="" coords="1453,1332,1663,1420">
+<area shape="rect" id="node16" href="game_reviews_summary.html" target="_top" title="game_reviews_summary" alt="" coords="1398,621,1718,768">
+<area shape="rect" id="node32" href="map.html" target="_top" title="map" alt="" coords="317,1387,492,1475">
 <area shape="rect" id="node19" href="global_rating.html" target="_top" title="global_rating" alt="" coords="299,2172,511,2260">
 <area shape="rect" id="node20" href="global_rating_rank_view.html" target="_top" title="global_rating_rank_view" alt="" coords="246,2277,563,2365">
-<area shape="rect" id="node21" href="ladder1v1_rating.html" target="_top" title="ladder1v1_rating" alt="" coords="280,2383,529,2471">
-<area shape="rect" id="node22" href="ladder1v1_rating_rank_view.html" target="_top" title="ladder1v1_rating_rank_view" alt="" coords="227,2488,583,2576">
-<area shape="rect" id="node23" href="ladder_division_score.html" target="_top" title="ladder_division_score" alt="" coords="259,2593,551,2681">
-<area shape="rect" id="node24" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="269,2699,540,2787">
-<area shape="rect" id="node25" href="leaderboard_rating_journal.html" target="_top" title="leaderboard_rating_journal" alt="" coords="1771,1159,2119,1247">
-<area shape="rect" id="node26" href="league.html" target="_top" title="league" alt="" coords="330,2840,479,2928">
-<area shape="rect" id="node27" href="league_schedule.html" target="_top" title="league_schedule" alt="" coords="645,2803,891,2891">
-<area shape="rect" id="node28" href="login_log.html" target="_top" title="login_log" alt="" coords="319,2945,490,3033">
-<area shape="rect" id="node29" href="login_verifier.html" target="_top" title="login_verifier" alt="" coords="299,3051,511,3139">
-<area shape="rect" id="node31" href="map_pool_map_version.html" target="_top" title="map_pool_map_version" alt="" coords="995,1028,1303,1116">
-<area shape="rect" id="node32" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="1009,1449,1289,1537">
-<area shape="rect" id="node33" href="map_version_reviews_summary.html" target="_top" title="map_version_reviews_summary" alt="" coords="955,1133,1344,1221">
-<area shape="rect" id="node34" href="matchmaker_queue.html" target="_top" title="matchmaker_queue" alt="" coords="1012,320,1287,408">
-<area shape="rect" id="node35" href="matchmaker_queue_game.html" target="_top" title="matchmaker_queue_game" alt="" coords="1389,340,1727,463">
-<area shape="rect" id="node36" href="mod.html" target="_top" title="mod" alt="" coords="317,3156,492,3244">
-<area shape="rect" id="node37" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="265,3261,545,3349">
-<area shape="rect" id="node38" href="name_history.html" target="_top" title="name_history" alt="" coords="297,3367,512,3455">
-<area shape="rect" id="node39" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="260,3472,549,3560">
-<area shape="rect" id="node40" href="player_events.html" target="_top" title="player_events" alt="" coords="295,3577,515,3665">
-<area shape="rect" id="node41" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1835,1505,2055,1593">
-<area shape="rect" id="node42" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="1003,1555,1296,1643">
-<area shape="rect" id="node43" href="table_map_features.html" target="_top" title="table_map_features" alt="" coords="1012,1239,1287,1327">
-<area shape="rect" id="node44" href="teamkills.html" target="_top" title="teamkills" alt="" coords="1471,1679,1645,1767">
-<area shape="rect" id="node45" href="tutorial.html" target="_top" title="tutorial" alt="" coords="1071,1344,1227,1432">
-<area shape="rect" id="node46" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="285,3683,525,3771">
-<area shape="rect" id="node47" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="279,3788,530,3876">
-<area shape="rect" id="node48" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="247,3893,562,3981">
-<area shape="rect" id="node49" href="user_notes.html" target="_top" title="user_notes" alt="" coords="310,3999,499,4087">
-<area shape="rect" id="node50" href="vote.html" target="_top" title="vote" alt="" coords="333,4104,476,4192">
+<area shape="rect" id="node21" href="gw_game_player_stats.html" target="_top" title="gw_game_player_stats" alt="" coords="1793,1049,2096,1137">
+<area shape="rect" id="node22" href="gw_game_stats.html" target="_top" title="gw_game_stats" alt="" coords="1442,785,1674,967">
+<area shape="rect" id="node23" href="ladder1v1_rating.html" target="_top" title="ladder1v1_rating" alt="" coords="280,2383,529,2471">
+<area shape="rect" id="node24" href="ladder1v1_rating_rank_view.html" target="_top" title="ladder1v1_rating_rank_view" alt="" coords="227,2488,583,2576">
+<area shape="rect" id="node25" href="ladder_division_score.html" target="_top" title="ladder_division_score" alt="" coords="259,2593,551,2681">
+<area shape="rect" id="node26" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="269,2699,540,2787">
+<area shape="rect" id="node27" href="leaderboard_rating_journal.html" target="_top" title="leaderboard_rating_journal" alt="" coords="1771,1155,2119,1243">
+<area shape="rect" id="node28" href="league.html" target="_top" title="league" alt="" coords="330,2840,479,2928">
+<area shape="rect" id="node29" href="league_schedule.html" target="_top" title="league_schedule" alt="" coords="645,2803,891,2891">
+<area shape="rect" id="node30" href="login_log.html" target="_top" title="login_log" alt="" coords="319,2945,490,3033">
+<area shape="rect" id="node31" href="login_verifier.html" target="_top" title="login_verifier" alt="" coords="299,3051,511,3139">
+<area shape="rect" id="node33" href="map_pool_map_version.html" target="_top" title="map_pool_map_version" alt="" coords="995,1028,1303,1116">
+<area shape="rect" id="node34" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="1009,1449,1289,1537">
+<area shape="rect" id="node35" href="map_version_reviews_summary.html" target="_top" title="map_version_reviews_summary" alt="" coords="955,1133,1344,1221">
+<area shape="rect" id="node36" href="matchmaker_queue.html" target="_top" title="matchmaker_queue" alt="" coords="1012,320,1287,408">
+<area shape="rect" id="node37" href="matchmaker_queue_game.html" target="_top" title="matchmaker_queue_game" alt="" coords="1389,317,1727,440">
+<area shape="rect" id="node38" href="mod.html" target="_top" title="mod" alt="" coords="317,3156,492,3244">
+<area shape="rect" id="node39" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="265,3261,545,3349">
+<area shape="rect" id="node40" href="name_history.html" target="_top" title="name_history" alt="" coords="297,3367,512,3455">
+<area shape="rect" id="node41" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="260,3472,549,3560">
+<area shape="rect" id="node42" href="player_events.html" target="_top" title="player_events" alt="" coords="295,3577,515,3665">
+<area shape="rect" id="node43" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1835,1529,2055,1617">
+<area shape="rect" id="node44" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="1003,1555,1296,1643">
+<area shape="rect" id="node45" href="table_map_features.html" target="_top" title="table_map_features" alt="" coords="1012,1239,1287,1327">
+<area shape="rect" id="node46" href="teamkills.html" target="_top" title="teamkills" alt="" coords="1471,1679,1645,1767">
+<area shape="rect" id="node47" href="tutorial.html" target="_top" title="tutorial" alt="" coords="1071,1344,1227,1432">
+<area shape="rect" id="node48" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="285,3683,525,3771">
+<area shape="rect" id="node49" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="279,3788,530,3876">
+<area shape="rect" id="node50" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="247,3893,562,3981">
+<area shape="rect" id="node51" href="user_notes.html" target="_top" title="user_notes" alt="" coords="310,3999,499,4087">
+<area shape="rect" id="node52" href="vote.html" target="_top" title="vote" alt="" coords="333,4104,476,4192">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/game_stats.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
